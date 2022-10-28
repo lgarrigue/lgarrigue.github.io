@@ -91,7 +91,7 @@ The goal of my work, as of many researchers in mathematical physics or in physic
 \begin{align*}
 	H_N := \sum_{n=1}^{N} \pa{-\Delta_{x_n} + v(x_n)} + \sum_{1 \le n,m \le N} w(x_n - x_m).
 \end{align*} 
-The function \(v \in L^p(\R^d)\) is the external electric potential, the function \(w \in L^p(\R^d)\) is the electric interaction potential between the \(N \in \N\) particles. We consider that the wave-functions \(\Psi \in H^1(\R^{dN})\), on which the Hamiltonian acts, model an entangled set of \(N\) electrons, and by the indistinguishability of particles in quantum theories, they are antisymmetric under exchange of particles. The quantity \(\ab{\Psi}^2(x_1, \dots, x_N)\) is experimentally the probability density of presence of the set of \(N\) particles, hence \(\int_{\R^{dN}} \ab{\Psi}^2 = 1\). Moreover, the energy of a state \(\Psi\) is \(\ps{\Psi,H_N \Psi}\) In time-dependent settings, it evolves under the equation \(-i\partial_t \Psi = H \Psi\), while at equilibrium it is a minimizer of the eigenvalue problem
+The function \(v \in (L^p+L^{\infty})(\R^d)\) is the external electric potential, the function \(w \in (L^p+L^{\infty})(\R^d)\) is the electric interaction potential between the \(N \in \N\) particles. The number \(p\) is taken to be \(1\) for \(d=1\), \(>1\) for \(d=2\) and \(d/2\) for \(d \ge 3\), so that \(H_N\) is bounded from below by Sobolev's inequality. We consider that the wave-functions \(\Psi \in H^1(\R^{dN})\), on which the Hamiltonian acts, model an entangled set of \(N\) electrons, and by the indistinguishability of particles in quantum theories, they are antisymmetric under exchange of particles. The quantity \(\ab{\Psi}^2(x_1, \dots, x_N)\) is experimentally the probability density of presence of the set of \(N\) particles, hence \(\int_{\R^{dN}} \ab{\Psi}^2 = 1\). Moreover, the energy of a state \(\Psi\) is \(\ps{\Psi,H_N \Psi}\) In time-dependent settings, it evolves under the equation \(-i\partial_t \Psi = H \Psi\), while at equilibrium it is a minimizer of the eigenvalue problem
 \begin{align*}
 	E_0 := \myinf{\Psi \in H^1(\R^{dN}) \\ \nor{\Psi}{L^2(\R^{dN})} = 1} \ps{\Psi, H_N \Psi},
 \end{align*}
@@ -99,6 +99,7 @@ and \(E_0\) is called the ground state energy. The operator \(H_N\) is important
 
 Unfortunately, this optimization problem is out of reach already for a few electrons, because the required numerical ressources increase exponentially with \(N\). Consequently, to meet the many needs of quantum mechanics, which are still growing fast, countless technics where and are still under development.
 </p>
+
 
 
    <!-- <h3>Injectivity in density functional theory</h3> -->
