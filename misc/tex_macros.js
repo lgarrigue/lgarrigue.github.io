@@ -3,6 +3,7 @@ window.MathJax = {
     macros: {
       R: "{\\mathbb{R}}",
       N: "{\\mathbb{N}}",
+      d: "{{\\rm d}}\\def\\1{{\\mathds{1}}}",
       pa: ["{\\left( #1 \\right)}",1],
       ab: ["{\\left| #1 \\right|}",1],
       ps: ["{\\left< #1 \\right>}",1],

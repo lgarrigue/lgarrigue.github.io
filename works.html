@@ -10,8 +10,8 @@
 <link rel="stylesheet" href="pastel.css">
 
 
-<!-- LaTeX mathjax --><script type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <!-- LaTeX macros --><script type="text/javascript" id="MathJax-script" src="misc/tex_macros.js"></script>
+<!-- LaTeX mathjax --><script type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
 </head>
 <body>
@@ -103,10 +103,15 @@ Unfortunately, this optimization problem is out of reach already for a few elect
 
 
 
-   <!-- <h3>Injectivity in density functional theory</h3> -->
-<!-- <p> -->
-<!-- Density functional theory is the most -->
-<!-- </p> -->
+   <h3>Density functional theory</h3>
+   <h4>Introduction</h4>
+<p>
+Density functional theory (DFT) is the most efficient and used way of obtaining quantitative information on many-body quantum systems, when the number of electrons \(N\) lies between \(5 \cdot 10^1\) and \(10^3\). To describe it, we define the marginal of \(\ab{\Psi}^2\) over \(N-1\) particles, called the density
+\begin{align*}
+\rho_{\Psi}(x) := N \int_{\R^{d(N-1)}} \ab{\Psi}^2(x_1,\dots,x_N) \d x_2 \cdots \d x_N,
+\end{align*} 
+which is a real positive function of \(\R^d\), is experimentally accessible, numerically small, and has a simple interpretation. Let us consider that we describe a system of \(N\) quantum electrons via the density \(\rho_{\Psi_0}\) of a ground state of an interacting system labeled by \((v,w)\). As we mentioned before, the associated eigenmodes problem is too complicated, and the idea is to replace the system by a much simpler one \((v_{\text{KS}},0)\) in which there is no interaction. Indeed, in the non-interacting case, the \(N\)-body eigenvalue problem factorizes to a \(1\)-body one, in which one needs to compute the \(N\) first eigenmodes, but this is theoretically and numerically accessible. In this manner, we obtain approximations for any physical quantities. Mapping an interacting system to a non-interacting one is ubiquitous in physics, and they distinguish by the way they build the effective fields. The idea of DFT is to choose the effective potential \(v_{\text{KS}}\) such that the one ground state density of \((v,w)\) and \((v_{\text{KS}},0)\) are equal, this is an inverse problem needing existence and uniqueness results.
+</p>
 
  </div>
  <!-- end of detailed presentation -->
