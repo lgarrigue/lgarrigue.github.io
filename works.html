@@ -1,0 +1,116 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Webpage of Louis Garrigue</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="Description" lang="en" content="Webpage of Louis Garrigue">
+<link rel="stylesheet" href="pastel.css">
+
+
+<!-- LaTeX mathjax --><script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<!-- LaTeX macros --><script type="text/javascript" id="MathJax-script" src="misc/tex_macros.js"></script>
+
+</head>
+<body>
+
+<!-- Header -->
+<nav>
+ <input type="checkbox" id="show-menu" role="button">
+ <label for="show-menu" class="open"><span class="fa fa-bars"></span></label>
+ <label for="show-menu" class="close"><span class="fa fa-times"></label>
+ <ul id="menu">
+  <li><a class="active" href="index.html">Home</a></li>
+  <li><a href="works.html">Description of my works</a></li>
+  <!-- <li><a href="teaching.html">Teaching</a></li> -->
+ </ul>
+</nav>
+<div id="banner">
+ <div id="header">
+  <h1>Louis Garrigue</h1>
+  <!-- <p class="sub">Postdoc-Forscher in mathematischer Quantenmechanik</p> -->
+  <p class="sub">Postdoctoral researcher in mathematical quantum mechanics</p>
+ </div>
+</div>
+<br>
+<!-- End header -->
+
+
+
+<div id="content">
+ <!-- Page Items -->
+ 
+
+
+
+ <div class="pageitem">
+  <!-- <p class="sub">Images in three columns and unlimited rows. -->
+  <h2>Links</h2>
+   <h3>Slides</h3>
+<p>Here are condensed presentations of some of my works:</p>
+<ul>
+<li>
+<a href="./slides/hom.pdf">Spectral theory for homogenization</a>, which I presented at Oldenburg in September 2022
+</li>
+<li>
+<a href="./slides/inv.pdf">Building the Kohn-Sham potential</a>, which I presented at Dijon in March 2021
+</li>
+<li>
+<a href="./slides/hk.pdf">New Hohenberg-Kohn theorems</a>, which I presented at Singapore in September 2019
+</li>
+<li>
+<a href="./slides/ucp.pdf">Unique continuation for the Hohenberg-Kohn theorem</a>, which I presented at Banff in January 2019
+</li>
+</ul>
+
+   <h3>Codes</h3>
+<p>On my <a href="https://github.com/lgarrigue">github repository</a>, you can find:</p>
+<ul>
+<li>
+a <a href="https://github.com/lgarrigue/homogenization-schrodinger">code</a> to compute the eigenmodes of the homogenized Schr&#246;dinger operator, corresponding to <a href="https://arxiv.org/abs/2112.12008">this article</a>
+</li>
+<li>
+a <a href="https://github.com/lgarrigue/many_body_dyn">code</a> to propagate in time the exact many-body Schr&#246;dinger operator containing the two-body interaction between particles, in dimension one but for any number of particles
+</li>
+<li>
+a <a href="https://github.com/lgarrigue/inverse_potential_static">code</a> to obtain the inverse potential of some one-body density, corresponding to <a href="https://arxiv.org/abs/2101.01127">this article</a>
+</li>
+</ul>
+ </div>
+
+
+
+
+ <div class="pageitem">
+  <!-- <p class="sub">Images in three columns and unlimited rows. -->
+  <h2>Presentation</h2>
+   <h3>Many-body quantum mechanics</h3>
+<p>
+The goal of my work, as of many researchers in mathematical physics or in physics, is to understand how we can obtain qualitative and quantitative information on many-body systems. More precisely, I work on non-relativistic quantum mechanics, which fundamental object is the many-body Schrödinger Hamiltonian
+\begin{align*}
+	H_N := \sum_{n=1}^{N} \pa{-\Delta_{x_n} + v(x_n)} + \sum_{1 \le n,m \le N} w(x_n - x_m).
+\end{align*} 
+The function \(v \in L^p(\R^d)\) is the external electric potential, the function \(w \in L^p(\R^d)\) is the electric interaction potential between the \(N \in \N\) particles. We consider that the wave-functions \(\Psi \in H^1(\R^{dN})\), on which the Hamiltonian acts, model an entangled set of \(N\) electrons, and by the indistinguishability of particles in quantum theories, they are antisymmetric under exchange of particles. The quantity \(\ab{\Psi}^2(x_1, \dots, x_N)\) is experimentally the probability density of presence of the set of \(N\) particles, hence \(\int_{\R^{dN}} \ab{\Psi}^2 = 1\). Moreover, the energy of a state \(\Psi\) is \(\ps{\Psi,H_N \Psi}\) In time-dependent settings, it evolves under the equation \(-i\partial_t \Psi = H \Psi\), while at equilibrium it is a minimizer of the eigenvalue problem
+\begin{align*}
+	E_0 := \myinf{\Psi \in H^1(\R^{dN}) \\ \nor{\Psi}{L^2(\R^{dN})} = 1} \ps{\Psi, H_N \Psi},
+\end{align*}
+and \(E_0\) is called the ground state energy. The operator \(H_N\) is important in today's science, lying at the heart of condensed matter, quantum chemistry, and some parts of material science and nuclear physics.
+
+Unfortunately, this optimization problem is out of reach already for a few electrons, because the required numerical ressources increase exponentially with \(N\). Consequently, to meet the many needs of quantum mechanics, which are still growing fast, countless technics where and are still under development.
+</p>
+
+
+   <!-- <h3>Injectivity in density functional theory</h3> -->
+<!-- <p> -->
+<!-- Density functional theory is the most -->
+<!-- </p> -->
+
+ </div>
+ <!-- end of detailed presentation -->
+
+
+</div>
+</body>
+</html>

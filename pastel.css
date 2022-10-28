@@ -8,7 +8,7 @@ html, body {
 body {
 	background-color: #fff;
 	color: #555;
-	font: normal 16px/150% 'Mako', sans-serif;
+	font: normal 20px/150% 'Mako', sans-serif;
 	/*font-family: 'Mako', sans-serif;
 	font-size: 16px;
 	font-weight: normal;*/
@@ -101,7 +101,7 @@ ul#menu li a:hover, ul#menu li a.active {
 	display: table;
 	width: 100%;
 	height: 150px;
-	background-color: #79BFA1;
+	background-color: #93A0FF; /* bannière tout en haut */
 	color: #fff;
 	margin-top: 18px;
 }
