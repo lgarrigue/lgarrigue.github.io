@@ -108,9 +108,28 @@ Unfortunately, this optimization problem is out of reach already for a few elect
 <p>
 Density functional theory (DFT) is the most efficient and used way of obtaining quantitative information on many-body quantum systems, when the number of electrons \(N\) lies between \(5 \cdot 10^1\) and \(10^3\). To describe it, we define the marginal of \(\ab{\Psi}^2\) over \(N-1\) particles, called the density
 \begin{align*}
-\rho_{\Psi}(x) := N \int_{\R^{d(N-1)}} \ab{\Psi}^2(x_1,\dots,x_N) \d x_2 \cdots \d x_N,
+\rho_{\Psi}(x) := N \int_{\R^{d(N-1)}} \ab{\Psi}^2(x,x_2,\dots,x_N) \d x_2 \cdots \d x_N,
 \end{align*} 
-which is a real positive function of \(\R^d\), is experimentally accessible, numerically small, and has a simple interpretation. Let us consider that we describe a system of \(N\) quantum electrons via the density \(\rho_{\Psi_0}\) of a ground state of an interacting system labeled by \((v,w)\). As we mentioned before, the associated eigenmodes problem is too complicated, and the idea is to replace the system by a much simpler one \((v_{\text{KS}},0)\) in which there is no interaction. Indeed, in the non-interacting case, the \(N\)-body eigenvalue problem factorizes to a \(1\)-body one, in which one needs to compute the \(N\) first eigenmodes, but this is theoretically and numerically accessible. In this manner, we obtain approximations for any physical quantities. Mapping an interacting system to a non-interacting one is ubiquitous in physics, and they distinguish by the way they build the effective fields. The idea of DFT is to choose the effective potential \(v_{\text{KS}}\) such that the one ground state density of \((v,w)\) and \((v_{\text{KS}},0)\) are equal, this is an inverse problem needing existence and uniqueness results.
+which is a real positive function of \(\R^d\), is experimentally accessible, numerically small, and has a simple interpretation. Let us consider that we describe a system of \(N\) quantum electrons via the density \(\rho_{\Psi_0}\) of a ground state of an interacting system labeled by \((v,w)\). As we mentioned before, the associated eigenmodes problem is too complicated, and the idea is to replace the system by a much simpler one \((v_{\text{KS}},0)\) in which there is no interaction. Indeed, in the non-interacting case, the \(N\)-body eigenvalue problem factorizes to a \(1\)-body one, in which one needs to compute the \(N\) first eigenmodes, but this is theoretically and numerically accessible. In this manner, we obtain approximations for any physical quantities. Mapping an interacting system to a non-interacting one is ubiquitous in physics, and they distinguish by the way they build the effective fields. The idea of DFT is to choose the effective potential \(v_{\text{KS}}\), called the Kohn-Sham potential, such that the one ground state density of \((v,w)\) and \((v_{\text{KS}},0)\) are equal, this is an inverse problem needing existence and uniqueness results.
+</p>
+
+
+   <h4>Uniqueness</h4>
+<p>
+The uniqueness result, founding DFT, is called the Hohenberg-Kohn theorem, named after its discoverers. More precisely, taking a fixed interaction \(w \in L^q(\R^d)\) and two potentials \(v,u \in L^q(\R^d)\) having ground states \(\Psi_u,\Psi_v\), if \(\rho_{\Psi_u} = \rho_{\Psi_v}\), then \(v = u + c\) where \(c \in \R\) is a constant. In ..., Lieb realized that the mathematical step of this theorem, providing precise values of \(q\), relies on a unique continuation result, on which I worked. 
+</p>
+
+<p>
+Up to then, the mathematical litterature only allowed to take \(q = dN/2\), and for \(N \ge 2\) the Coulomb singularities arising from physical settings could no be taken into account. Hence, using technics from Carleman, Hörmander and Koch-Tataru, I showed a unique continuation principle taylored for many-body Schrödinger Hamiltonians, enabling to take \(q > \max(2d/3,2)\), which can treat Coulomb-like singularities. 
+</p>
+
+   <h4>Existence</h4>
+<p>
+By the previous discussion, if the Kohn-Sham potential exists, it is uniquely defined. A first existence result from Lieb established that there is always an approximate inverse in the case where we allow to take mixed states in the optimization problem, and in the case of the first eigenmode, but using the abstract Bishop-Phelps theorem. On the other hand, there was many physics works about the practical computation of \(v_\text{KS}\), based on the maximization of DFT's dual functional,
+\begin{align*}
+G_\rho(v) := E(v) - \int_{\R^d} v \rho, \qquad \text{where } E(v) := \myinf{\Psi \in H^1(\R^d) \\ \nor{\Psi}{L^2(\R^d)} = 1} \ps{\Psi,H_N(v) \Psi}
+\end{align*} 
+called the Yu-Wang procedure.
 </p>
 
  </div>
