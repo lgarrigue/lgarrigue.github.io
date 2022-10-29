@@ -8,7 +8,7 @@ html, body {
 body {
 	background-color: #fff;
 	color: #555;
-	font: normal 20px/150% 'Mako', sans-serif;
+	font: normal 18px/150% 'Mako', sans-serif;
 	/*font-family: 'Mako', sans-serif;
 	font-size: 16px;
 	font-weight: normal;*/
@@ -231,4 +231,19 @@ ul#menu li a:hover, ul#menu li a.active {
 	#footer {
 		text-align: center;
 	}
+}
+
+/* Latex */
+.theorem {
+display: block;
+font-style: italic;
+}
+.theorem:before {
+content: "Theorem. ";
+font-weight: normal;
+font-style: normal;
+}
+.theorem[text]:before {
+content: "Theorem (" attr(text) "). ";
+color: #180390;
 }
