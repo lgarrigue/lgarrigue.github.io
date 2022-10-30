@@ -269,9 +269,36 @@ In 2017, an experimental study \eqref{CaoFatFan18} found that at a so-called "ma
 
 At the magic angle of \(\theta \simeq 1.1°\), the order of magnitude of the number of atoms present in a moiré supercell (smallest periodic cell) is \(10^4\), hence even Density functional theory is not able to model it efficiently, and one needs other methods. It is nevertheless reasonnable to expect that we can apply the results of the limit \(\theta \rightarrow 0\) to build effective models. The basic one was derived by Bistritzer and MacDonald in \eqref{BisMac11}. In \eqref{TarKruVis19}, the authors showed that the Bistritzer-MacDonald Hamiltonian has exactly flat Fermi bands at the magic angle when a parameter is taken to be \(0\), and the model was also recently studied mathematically in \eqref{BecEmbWit22}, \eqref{WatLus21}, \eqref{BecHumZwo22b}, \eqref{BecHumZwo22}, and \eqref{WatKonMac22}.
 
+   <h3>The Bistritzer-MacDonal Hamiltonian</h3>
+Let us define the Pauli matrices
+\begin{align*}
+   \sigma_1 := \mat{0 & 1 \\ 1 & 0}, \qquad \sigma_2 := \mat{0 & -i \\ i & 0}, \qquad \sigma := \mat{\sigma_1 \\ \sigma_2}, 
+\end{align*}
+the complex number \(\omega := e^{i \f{2\pi}{3}}\), the vectors \(q_1 := (0,-1), q_2 := R_{\f{2\pi}{3}} q_1, q_3 := R_{\f{2\pi}{3}} q_2\) and the potentials
+   \begin{align*}
+   F(x) := e^{-iq_1 x} + \overline{\omega} e^{-iq_2 x}+ \omega e^{-iq_3 x}, \qquad G(x) := e^{-iq_1 x} + e^{-iq_2 x}+ e^{-iq_3 x}, \qquad T(x) := \mat{w\ind{AA} G(x) & w\ind{AB} F(x) \\ w\ind{AB} \overline{F(-x)} & w\ind{AA} G(x)}.
+   \end{align*}
+
+   The Bistritzer-MacDonald Hamiltonian \eqref{BisMac11}, which is the standard effective operator of the bilayer-graphene system, is 
+   \begin{align*}
+   H_\text{BM} = \mat{v\ind{F} \sigma \cdot (-i\nabla) & \f{1}{\ep} T(x) \\ \f{1}{\ep} T^*(x) & v\ind{F}\sigma \cdot (-i\nabla)}.
+   \end{align*}
+   where 
+Its derivation is done from the approximated tight-binding model.
 
    <h3>A new derivation</h3>
-   In \eqref{CanGarGon22}, we proposed another way of deriving Bistritzer-MacDonald-like Hamiltonians, enabling to model twisted multilayer quantum systems.
+   In \eqref{CanGarGon22}, we proposed another way of deriving Bistritzer-MacDonald-like Hamiltonians enabling to model twisted multilayer quantum systems. The standard derivation starts from the tight-binding approximated model, while in \eqref{CanGarGon22} we start from a monolayer one-body Hamiltonian in the whole \(\R^d\) space. We extract the two degenerate Fermi states \((\phi_j)_{j \in \{1,2\}}\) forming the Dirac energy cone and studied mathematically by Fefferman and Weinstein \eqref{FefWei12}, and we apply the variational approximation in the space \(\text{Span } \pa{U^\eta \phi_j}_{j \in \{1,2\}}^{\eta \in \{+,-\}}\), where \(U^\eta := R_{\eta \theta/2} \tau_{d e_z/2} \), \(R_\delta\) being the rotation operator, around the \(z\)-axis, and \(\tau_{y}\) being the translation of vector \(y\). We deduce an effective operator of the form
+
+   H\ind{eff} = \mat{v\ind{F} \sigma \cdot (-i\nabla) & J(-i\nabla \Sigma)(x) \cdot (-i\nabla)  \\  J(-i\nabla \Sigma^*)(x) \cdot (-i\nabla)  & v\ind{F}\sigma \cdot (-i\nabla) } + \f{1}{\ep} \mat{\bbW^+(x) & \bbV(x) \\ \bbV^*(x) & \bbW^+(x) } + O(\ep)
+   \end{align*}
+   where 
+\begin{align*}
+\f{\nor{\bbV - T}{L^2(\Omega,\C^4)}}{\nor{T}{L^2(\Omega,\C^4)}} \sim 10^{-3}
+\end{align*}
+The eigenvalue equation is \(H\ind{eff} \Psi = S \Psi\). Here is the band diagram at the first magic angle.
+   <center>
+<img src="pics/tbg/band_struct.png" height="400" align="center">
+</center>
 
 
    <h3>Bibliography</h3>
@@ -279,9 +306,10 @@ At the magic angle of \(\theta \simeq 1.1°\), the order of magnitude of the num
 \begin{align}
 &\bibref{S. Becker, T. Humbert, and M. Zworski, Fine structure of flat bands in a chiral model of magic angles, arXiv preprint arXiv:2208.01628, (2022).} \label{BecHumZwo22b} \\
 &\bibref{S. Becker, T. Humbert, and M. Zworski, Integrability in the chiral model of magic angles, arXiv preprint arXiv:2208.01620, (2022).} \label{BecHumZwo22} \\
-&\bibref{R. Bistritzer, A. H. MacDonald. "Moiré bands in twisted double-layer graphene". Proceedings of the National Academy of Sciences. 108 (30): 12233–12237 (2011).} \label{BisMac11} \\
+&\bibref{R. Bistritzer, A. H. MacDonald. Moiré bands in twisted double-layer graphene. Proceedings of the National Academy of Sciences. 108 (30): 12233–12237 (2011).} \label{BisMac11} \\
 &\bibref{É. Cancès, L. Garrigue, D. Gontier. A simple derivation of moiré-scale continuous models for twisted bilayer graphene (arxiv:2206.05685), preprint (2022)} \label{CanGarGon22} \\
 &\bibref{Y. Cao, V. Fatemi, S. Fang, K. Watanabe, T. Taniguchi, E. Kaxiras, P. Jarillo-Herrero (5 March 2018). Unconventional superconductivity in magic-angle graphene superlattices. Nature. 556 (7699): 43–50} \label{CaoFatFan18} \\
+&\bibref{C. Fefferman and M. Weinstein, Honeycomb lattice potentials and Dirac points, J. Am. Math. Soc, 25 (2012), pp. 1169–1220.} \label{FefWei12} \\
 &\bibref{G. Tarnopolsky, A. J. Kruchkov, and A. Vishwanath. Origin of Magic Angles in Twisted Bilayer Graphene. Phys. Rev. Letters 122.10 (2019).} \label{TarKruVis19}\\
 &\bibref{A. B. Watson, T. Kong, A. H. MacDonald, and M. Luskin, Bistritzer-macdonald dynamics in twisted bilayer graphene, arXiv preprint arXiv:2207.13767, (2022).} \label{WatKonMac22} \\
 &\bibref{A. B. Watson and M. Luskin, Existence of the first magic angle for the chiral model of bilayer graphene. J. Math. Phys 62.9 (2021), p. 091502.} \label{WatLus21} \\
