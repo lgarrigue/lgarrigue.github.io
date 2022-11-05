@@ -284,21 +284,26 @@ the complex number \(\omega := e^{i \f{2\pi}{3}}\), the vectors \(q_1 := (0,-1),
    H_\text{BM} = \mat{v\ind{F} \sigma \cdot (-i\nabla) & \f{1}{\ep} T(x) \\ \f{1}{\ep} T^*(x) & v\ind{F}\sigma \cdot (-i\nabla)}.
    \end{align*}
    where 
-Its derivation is done from the approximated tight-binding model.
+Its derivation is done from the approximated tight-binding model. We remark that the corner elements are Dirac operators.
 
    <h3>A new derivation</h3>
-   In \eqref{CanGarGon22}, we proposed another way of deriving Bistritzer-MacDonald-like Hamiltonians enabling to model twisted multilayer quantum systems. The standard derivation starts from the tight-binding approximated model, while in \eqref{CanGarGon22} we start from a monolayer one-body Hamiltonian in the whole \(\R^d\) space. We extract the two degenerate Fermi states \((\phi_j)_{j \in \{1,2\}}\) forming the Dirac energy cone and studied mathematically by Fefferman and Weinstein \eqref{FefWei12}, and we apply the variational approximation in the space \(\text{Span } \pa{U^\eta \phi_j}_{j \in \{1,2\}}^{\eta \in \{+,-\}}\), where \(U^\eta := R_{\eta \theta/2} \tau_{d e_z/2} \), \(R_\delta\) being the rotation operator, around the \(z\)-axis, and \(\tau_{y}\) being the translation of vector \(y\). We deduce an effective operator of the form
-
+   In \eqref{CanGarGon22}, we proposed another way of deriving Bistritzer-MacDonald-like Hamiltonians enabling to model twisted multilayer quantum systems. The standard derivation starts from the tight-binding approximated model, while in \eqref{CanGarGon22} we start from a monolayer one-body Hamiltonian in the whole \(\R^d\) space. We extract the two degenerate Fermi states \((\phi_j)_{j \in \{1,2\}}\) forming the Dirac energy cone and studied mathematically by Fefferman and Weinstein in \eqref{FefWei12}. We apply the variational approximation in the space \(\text{Span } \pa{U^\eta \phi_j}_{j \in \{1,2\}}^{\eta \in \{+,-\}}\), where \(U^\eta := R_{\eta \theta/2} \tau_{d e_z/2} \), \(R_\delta\) being the rotation operator, around the \(z\)-axis, and \(\tau_{y}\) being the translation of vector \(y\). We deduce an effective operator of the form
+\begin{align*}
    H\ind{eff} = \mat{v\ind{F} \sigma \cdot (-i\nabla) & J(-i\nabla \Sigma)(x) \cdot (-i\nabla)  \\  J(-i\nabla \Sigma^*)(x) \cdot (-i\nabla)  & v\ind{F}\sigma \cdot (-i\nabla) } + \f{1}{\ep} \mat{\bbW^+(x) & \bbV(x) \\ \bbV^*(x) & \bbW^+(x) } + O(\ep)
    \end{align*}
-   where 
+   where \(\ep := 2 \sin \f{\theta}{2}\). We remarked that
 \begin{align*}
-\f{\nor{\bbV - T}{L^2(\Omega,\C^4)}}{\nor{T}{L^2(\Omega,\C^4)}} \sim 10^{-3}
+\f{\nor{\bbV - T}{L^2(\Omega,\C^4)}}{\nor{T}{L^2(\Omega,\C^4)}} \sim 10^{-3},
 \end{align*}
+showing that the effective potential \(\bbV\) is very close to the one of the Bistritzer-MacDonald Hamiltonian. Moreover, \(\bbW\) and \(\Sigma\) are small compared to \(\bbV\). Hence, naturally, the band diagrams are also close as we can see in the following figure, where \(\theta \sim 1.1^°\) is the first magic angle, and we represent the diagram of \(H\ind{BM}\) on the left and the one of \(H\ind{eff}\) on the right
 
+<br>
    <center>
-<img src="pics/tbg/band_struct.png" height="400" align="center">
+<img src="pics/tbg/band_struct_bm.png" height="600" align="center">
+<img src="pics/tbg/band_struct_eff.png" height="600" align="center">
 </center>
+
+This also gives an estimation of the coefficients \(w\ind{AA}\) and \(w\ind{AB}\) of the Bistritzer-MacDonald Hamiltonian. 
 
 
    <h3>Bibliography</h3>
